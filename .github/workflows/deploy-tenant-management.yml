@@ -34,6 +34,12 @@ jobs:
         working-directory: ./tenant-management
         run: npm run build -- --configuration production
 
+      - name: List build output
+        working-directory: ./tenant-management
+        run: |
+          echo "Build output contents:"
+          ls -la dist/tenant-management/ || ls -la dist/ || echo "Dist directory not found"
+
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:

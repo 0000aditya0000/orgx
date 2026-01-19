@@ -1,6 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
+const path = require("path");
 
 const dotenv = require("dotenv");
 
@@ -9,6 +10,7 @@ module.exports = (options) => {
   return {
     entry: "./index.js",
     output: {
+      path: path.resolve(__dirname, "dist"),
       filename: "bundle.js",
       publicPath: "auto",
       uniqueName: "company",
