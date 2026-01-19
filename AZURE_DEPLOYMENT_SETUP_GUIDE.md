@@ -51,11 +51,83 @@ For each App Service instance, configure the following:
 
 ### 2.1 General Settings
 
+For each App Service, configure the following:
+
 1. Navigate to your App Service in Azure Portal
 2. Go to **"Configuration"** → **"General settings"**
 3. Set:
    - **Stack**: Node.js 18 LTS
-   - **Startup Command**: Leave empty (or set based on your needs)
+   - **Startup Command**: See app-specific commands below
+
+#### Startup Commands for Each App
+
+**All three apps are Single Page Applications (SPAs)** that need a static file server with history API fallback support for client-side routing.
+
+##### 1. Company Management (React App)
+
+**App Service Name**: `your-company-management-app`
+
+**Startup Command**:
+```bash
+npx serve -s . -l 8080
+```
+
+**Alternative** (if npx doesn't work):
+```bash
+npm install -g serve && serve -s . -l 8080
+```
+
+**What this does**:
+- `-s` flag enables single-page application mode (history API fallback)
+- `-l 8080` sets the port to 8080 (Azure's default)
+- `.` serves from the current directory (`/home/site/wwwroot/`)
+
+##### 2. Tenant Management (Angular App)
+
+**App Service Name**: `your-tenant-management-app`
+
+**Startup Command**:
+```bash
+npx serve -s . -l 8080
+```
+
+**Alternative**:
+```bash
+npm install -g serve && serve -s . -l 8080
+```
+
+**Note**: Same command as React app - Angular SPAs also need history API fallback.
+
+##### 3. Multi-Tenant Management (Angular App)
+
+**App Service Name**: `your-multi-tenant-management-app`
+
+**Startup Command**:
+```bash
+npx serve -s . -l 8080
+```
+
+**Alternative**:
+```bash
+npm install -g serve && serve -s . -l 8080
+```
+
+**Note**: Same command as the other apps - all three are SPAs with client-side routing.
+
+---
+
+**Important Notes**:
+
+1. **Port**: Azure App Service uses port `8080` by default. Don't change this unless you've configured a custom port.
+
+2. **SPA Mode (`-s` flag)**: The `-s` flag is crucial for SPAs because it:
+   - Enables history API fallback (routes like `/dashboard` will serve `index.html`)
+   - Prevents 404 errors on page refresh
+   - Works for both React and Angular SPAs
+
+3. **If `npx serve` doesn't work**: You can install `serve` globally using the alternative command, or add it to your workflow's build step.
+
+4. **Testing**: After setting the startup command, restart your App Service and check the logs to ensure the server starts correctly.
 
 ### 2.2 Application Settings (if needed)
 
@@ -213,6 +285,25 @@ This ensures that:
 2. Verify the startup command (if needed)
 3. Check application settings/environment variables
 4. Verify the build output directory is correct
+
+### Files Not in /site/wwwroot/ After Deployment
+
+If deployment succeeds but files aren't in `/home/site/wwwroot/`:
+
+1. **Verify the package path in workflow**:
+   - Company Management: `./company-management/dist`
+   - Multi-Tenant: `./multi-tenant-management/dist/multi-tenant-management`
+   - Tenant: `./tenant-management/dist/tenant-management`
+
+2. **Check build output exists**: The workflow now includes a step to list build output. Verify files are being created.
+
+3. **Verify Azure deployment path**: 
+   - SSH into your App Service: `az webapp ssh --name <app-name> --resource-group <resource-group>`
+   - Check if files exist: `ls -la /home/site/wwwroot/`
+
+4. **Ensure startup command is set**: For static SPAs, you need a startup command to serve files (see Step 2.1)
+
+5. **Check deployment logs**: In GitHub Actions, expand the "Deploy to Azure App Service" step to see what was deployed
 
 ---
 

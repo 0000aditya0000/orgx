@@ -34,6 +34,12 @@ jobs:
         working-directory: ./company-management
         run: npm run build
 
+      - name: List build output
+        working-directory: ./company-management
+        run: |
+          echo "Build output contents:"
+          ls -la dist/ || ls -la . | head -20
+
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
