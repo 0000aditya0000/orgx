@@ -34,6 +34,12 @@ jobs:
         working-directory: ./multi-tenant-management
         run: npm run build -- --configuration production
 
+      - name: List build output
+        working-directory: ./multi-tenant-management
+        run: |
+          echo "Build output contents:"
+          ls -la dist/multi-tenant-management/ || ls -la dist/ || echo "Dist directory not found"
+
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3
         with:
