@@ -1,0 +1,77 @@
+.modal-dialog-slideout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 35%;
+  max-width: 800px;
+  margin: 0;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.modal-header
+  {
+    background: linear-gradient(316deg,#310e68 0%,#4a0d55 40%,#5f0f40 80%) no-repeat 0 0/cover;
+    color: white;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    height: 67px;
+  }
+
+.save {
+  background: linear-gradient(316deg,#310e68 0%,#4a0d55 40%,#5f0f40 80%) no-repeat 0 0/cover;
+  color: white;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-bottom: none;
+  padding: 8px 23px;
+  letter-spacing: .7px;
+  border: none;
+}
+
+.gradient-button {
+  background: linear-gradient(316deg,#310e68 0%,#4a0d55 40%,#5f0f40 80%) no-repeat 0 0/cover;
+  color: #fff !important;
+  padding: 8px 23px;
+  letter-spacing: .7px;
+  border: none;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.gradient-button:hover{
+  transform: scale(1.03);
+  background: linear-gradient(300deg,#5f0f40 0%,#4a0d55 50%, #310e68 90%) no-repeat 0 0/cover;
+}
+
+.modal.show .modal-dialog-slideout {
+  right: 0;
+  visibility: visible;
+}
+.modal.show .modal-dialog {
+  margin: 0 !important;
+  transform: none !important;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+  opacity: 1 !important;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .modal-dialog-slideout {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog-slideout {
+    width: 100%;
+  }
+}

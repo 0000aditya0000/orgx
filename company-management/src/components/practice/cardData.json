@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Application Engineering",
+    "description": "Lorem ipsum dolor sit amet iam libero harum temporibus mollitia dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?Lorem ipsum dolor sit amet iam libero harum temporibus mollitia dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?Lorem ipsum dolor sit amet iam libero harum temporibus mollitia dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?Lorem ipsum dolor sit amet iam libero harum temporibus mollitia dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?",
+    "totalEmployee": 50,
+    "head": "Anuj Tomar"
+  },
+  {
+    "id": 2,
+    "title": "Cloud Engineering (AMS)",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tema dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?",
+    "totalEmployee": 20,
+    "head": "Devansh Kapoor"
+  },
+  {
+    "id": 3,
+    "title": "Data Solutions",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tempora aperiam libe ptas sequi impedit fuga ab unde consequuntur nisi?",
+    "totalEmployee": 10,
+    "head": "Piyush Aggarwal"
+  },
+  {
+    "id": 4,
+    "title": "Quality Solutions",
+    "description": "Lorem ipsum dolor sit amet  tempora aperiam libero harum temporibus mollitia dignissimos voluptatum pariatur velit maxime, voluptas sequi impedit fuga ab unde consequuntur nisi?",
+    "totalEmployee": 15,
+    "head": "Saurabh Chaudhary"
+  },
+  {
+    "id": 5,
+    "title": "Business Process",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tempora aperiam libero harum tem nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tempora aperiam libero harum tem nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tempora aperiam libero harum tem nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et blanditiis tempora aperiam libero harum tem nisi?",
+    "totalEmployee": 25,
+    "head": "Paras Jain"
+  }
+]

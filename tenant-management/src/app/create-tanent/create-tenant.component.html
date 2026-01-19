@@ -1,0 +1,121 @@
+<div class="modal show d-block " tabindex="-1" role="dialog">
+  <div *ngIf="showModal" class="modal-dialog modal-dialog-slideout bg-white rounded-2" role="document">
+    <div class="modal-content d-flex flex-column h-100">
+      <div class="modal-header">
+        <h5 class="modal-title mx-2">{{editMode ? "Update Tenant ": "Create Tenant"}}</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="cancelModal()"></button>
+      </div>
+      <div class="modal-body d-flex flex-column h-100 overflow-auto ">
+        <form class="flex-grow-1 d-flex flex-column mt-4" [formGroup]="createTenantForm" (ngSubmit)="onSubmit()">
+          <div class="container-fluid">
+            <div class="row gx-4">
+              <div class="col-md-12 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Name</mat-label>
+                  <input matInput class="input" placeholder="Enter Name" name="name" autocomplete="off"
+                    formControlName="tenant_name" />
+                  <mat-error *ngIf="createTenantForm.get('tenant_name')?.hasError('required')">
+                    Name is required.
+                  </mat-error>
+                  <mat-error *ngIf="createTenantForm.get('tenant_name')?.hasError('minlength')">
+                    Name must be at least 3 characters
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-12 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Email</mat-label>
+                  <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="tenant_email" />
+                  <mat-error *ngIf="createTenantForm.get('tenant_email')?.hasError('required')">
+                    Email is required.
+                  </mat-error>
+                  <mat-error *ngIf="createTenantForm.get('tenant_email')?.hasError('email')">
+                    Please enter a valid email address.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Contact Number</mat-label>
+                  <input matInput type="number" placeholder="Contact Number" class="input" formControlName="phone" />
+                  <mat-error *ngIf="createTenantForm.get('phone')?.hasError('minlength')">
+                    Contact no. must be at least 10 digits
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Location</mat-label>
+                  <input matInput placeholder="Location" class="input" formControlName="location" />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Subscription Details</mat-label>
+                  <mat-select formControlName="subscription_details" placeholder="Select plan">
+                    <mat-option *ngFor="let plan of subscriptionPlans" [value]="plan.planName">{{ plan.planName }}</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="createTenantForm.get('subscription_details')?.hasError('required')">
+                    Subscription Detail is required.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <mat-form-field appearance="outline" floatLabel="always" class="w-100">
+                  <mat-label class="label">Status</mat-label>
+                  <mat-select formControlName="status" placeholder="Select status">
+                    <mat-option value="active">Active</mat-option>
+                    <mat-option value="inactive">Inactive</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="createTenantForm.get('status')?.hasError('required')">
+                    Status is required.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-12 mb-3" *ngIf="!editMode">
+                <mat-form-field appearance="outline" floatLabel="always"  class="w-100">
+                  <mat-label class="label">Password</mat-label>
+                  <input matInput placeholder="Enter Password" [type]="hide ? 'password' : 'text'"
+                    formControlName="password" />
+                  <mat-icon-button class="px-3" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon class="password-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </mat-icon-button>
+                  <mat-error *ngIf="createTenantForm.get('password')?.hasError('required')">
+                    Password is required.
+                  </mat-error>
+                  <mat-error *ngIf="createTenantForm.get('password')?.hasError('minlength')">
+                    Password must be at least 8 characters
+                  </mat-error>
+
+                  <mat-error *ngIf="!createTenantForm.get('password')?.hasError('minlength') &&
+                      createTenantForm.get('password')?.hasError('pattern')">
+                    Password must contain atleast one uppercase, one lowercase,
+                    one number, and one special character.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+            </div>
+          </div>
+          <div class="mt-auto d-flex justify-content-end mb-4 me-3">
+            <ng-container *ngIf="rowdata?.id">
+                  <button type="button" class="btn btn-secondary me-2" (click)="cancelModal()"> Cancel</button>
+                  <button type="submit" class="btn gradient-button" [disabled]="createTenantForm.invalid || createTenantForm.pristine">Update</button>
+            </ng-container>
+            <ng-container *ngIf="!rowdata?.id">
+              <button type="button" class="btn btn-secondary me-2" (click)="cancelModal()">Cancel</button>
+              <button type="submit" class="btn gradient-button" [disabled]="createTenantForm.invalid">Save</button>
+            </ng-container>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>

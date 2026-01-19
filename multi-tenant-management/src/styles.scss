@@ -1,0 +1,1223 @@
+
+@import "../src/app/footer/footer.component.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+.dark {
+  background-color: #12213c;
+  color: #dde6ed;
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .p,
+  .title {
+    color: #dde6ed;
+  }
+
+  .h5,
+  .h6 {
+    color: #dde6ed;
+  }
+
+  .tableHeader {
+    color: #dde6ed;
+  }
+
+  .text-color {
+    color: white !important;
+  }
+
+  .mdc-form-field>label {
+    color: white;
+  }
+
+  .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+    border-color: rgb(255, 255, 255) !important;
+  }
+
+  .table,
+  .button {
+    background-color: #8f9da8;
+    color: #dde6ed;
+  }
+
+  .tableMulti {
+    color: #dde6ed;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .mat-mdc-table,.mat-mdc-paginator {
+    .td {
+      color: #dde6ed;
+    }
+
+  th {
+    border-bottom: 3px solid red;
+  }
+    .mat-mdc-header-cell,.mat-mdc-cell {
+      color: #dde6ed;
+    }
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(12 27 54 / 75%);
+    border-radius: 12px;
+    // border: 1px solid rgba(255, 255, 255, 0.125);
+    color: #dde6ed;
+  }
+  .table {
+    .td {
+      color: #dde6ed;
+    }
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .doughnutChart {
+    background-color: #020e1f !important;
+    color: white !important;
+    height: max-content !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    border-radius: inherit !important;
+  }
+
+  .contricard {
+    background-color: #0b162b;
+    color: white;
+  }
+
+  .MuiInputBase-root {
+    color: white;
+
+    div {
+      color: white;
+    }
+  }
+
+  .cardleader {
+    background-color: #0b162b;
+    color: white;
+  }
+
+  .leaderlist {
+    border-bottom: 1px solid white;
+  }
+
+  .leaderrank {
+    color: white;
+  }
+
+  .contriselect {
+    color: white;
+  }
+
+  .chartTitle {
+    color: white !important;
+  }
+
+  .emp-edit {
+    background-color: #020e1f;
+    color: #dde6ed;
+  }
+
+  .emp_edit_tab {
+    background-color: #0b162b;
+    color: white;
+  }
+
+  .emp_edit_card {
+    background-color: #0b162b;
+    color: white;
+  }
+
+  .emp_edit_dialog {
+    background-color: #020e1f;
+  }
+
+  .practice {
+    background-color: #020e1f;
+    color: white;
+
+    .description {
+      color: white;
+      font-weight: 500;
+    }
+
+    .description_background_color {
+      background-color: #020e1f;
+    }
+
+    .practice_heading {
+      color: white;
+    }
+
+    .practice_content {
+      color: whitesmoke;
+    }
+
+    .icon_button {
+      color: white;
+    }
+
+    .description_content {
+      background-color: #20222c;
+    }
+
+    .expand_icon {
+      color: white;
+    }
+  }
+  .employee-dashboard-card{
+    background-color: #020e1f;
+    color: white;
+  }
+  .employee-dashboard-logo{
+    color: white;
+  }
+
+  .employee-dashboard-logo-border{
+    border-color: white;
+  }
+
+  .employee-dashboard-divider{
+    background: white;
+  }
+
+  .employee-dashboard-paper{
+    background-color: #12213c !important;
+    color: white;
+  }
+
+
+  .tab2{
+    background-color: #0c1a32;
+  }
+  .dash {
+    background-color: #020e1f;
+    color: #d6d6e5;
+  }
+
+  .dash-btn {
+    color: white;
+  }
+
+  .dash-icon {
+    color: white;
+    min-width: 2.5rem;
+  }
+
+  .nav-info {
+    color: white;
+  }
+
+  .nav-user-info li:hover {
+    border: #bfd1df;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .nav-user-dropdown {
+    background-color: #485c76;
+    color: white;
+  }
+
+  .toggle {
+    background-color: #bfd1df;
+    color: yellow;
+  }
+
+  .Image>svg {
+    fill: whitesmoke;
+  }
+
+  .dash-card {
+    background-color: #526d82;
+    box-shadow: 5px 5px #14243b;
+    color: white;
+  }
+
+  .card-details {
+    background-color: #27374d;
+  }
+
+  #myInput {
+    color: white;
+    border: 1px solid #27374d;
+    background-color: #27374d;
+  }
+
+  #myInput::placeholder {
+    color: white;
+  }
+
+  .fa-search {
+    color: white;
+  }
+
+  .tablefilter {
+    color: "white";
+  }
+
+  .tableselect {
+    color: white;
+  }
+
+  .okr {
+    background-color: #020e1f;
+  }
+
+  .okr-header-color {
+    color: white;
+  }
+
+  .okr-axis-color {
+    color: white;
+  }
+
+  .paperclass {
+    background-color: #020e1f;
+  }
+
+  .de_card {
+    background-color: inherit;
+    color: white;
+  }
+
+  .containerprofile {
+    background-color: #0c1a32;
+  }
+
+  .containerprofiletab {
+    border-bottom: 2px solid white;
+    border-color: white;
+  }
+
+  .profiletablabel {
+    color: white;
+  }
+
+  .inputitems {
+    div>div>label {
+      color: white;
+    }
+
+    div>div>input[type="text"] {
+      color: white;
+    }
+  }
+
+  .modalabout {
+    div>label {
+      color: white;
+    }
+
+    div>div>textarea {
+      color: white;
+    }
+  }
+
+  .backarrow {
+    color: white;
+  }
+
+  .inputavatar {
+    background-color: skyblue;
+    color: white;
+  }
+
+
+  input,
+  select {
+    color: white;
+  }
+
+
+  .Image img {
+    border-color: white;
+  }
+
+  .input {
+    color: white;
+  }
+
+  .mat-text-field_input::placeholder {
+    color: white !important;
+  }
+
+  .mat-input-element {
+    color: white !important;
+  }
+
+  .mat-form-field-autofill-control input {
+    color: white !important;
+  }
+
+  .cdk-text-field-autofill-monitored {
+    color: white !important;
+  }
+
+  .mat-option {
+    background-color: #14243b !important;
+    color: white !important;
+    border-color: white !important;
+  }
+
+  input::placeholder {
+    color: rgb(167, 157, 157) !important;
+  }
+
+  .custom-button {
+    cursor: pointer !important;
+    background-color: rgba(17, 25, 40, 0.75) !important;
+    border: none !important;
+    color: white !important;
+    margin-left: 35rem;
+    margin-bottom: 2rem;
+  }
+
+  .container-one {
+    color: #dde6ed;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .container-two {
+    color: #dde6ed;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .mdc-notched-outline .mdc-notched-outline__leading {
+    border-color: none !important;
+  }
+
+  .modal-body {
+    background-color: #12213c;
+  }
+  mat-label{
+    color: white;
+  }
+  .add-photo {
+    color: white !important;
+    z-index: 0;
+    margin-left: -10rem !important;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+      width: 20rem;
+    }
+  }
+
+  .title {
+    color: white !important;
+  }
+
+
+  .projectEmployementTitle {
+    color: white;
+  }
+
+  .projectEmployementCard {
+    background-color: #020e1f;
+  }
+
+  .employeeProfileCard {
+    background-color: #0c1a32;
+
+    .employeeText {
+      color: white;
+    }
+
+    .employeeIcons {
+      color: white;
+    }
+  }
+
+  .tab {
+    background-color: #0c1a32;
+  }
+
+  .company_profile_card {
+    background-color: #020e1f;
+    color: #dde6ed;
+    box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.15),
+      inset -10px -10px 30px rgba(0, 0, 0, 0.246);
+  }
+
+  .about-divider {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .MuiDialog-paper {
+    background-color: #0c1a31;
+    color: #dde6ed;
+  }
+
+  .company-edit-form {
+    div>label {
+      color: #dde6ed;
+    }
+
+    div>input[type="text"] {
+      color: #dde6ed;
+    }
+
+    div>input[type="email"] {
+      color: #dde6ed;
+    }
+
+    div>textarea {
+      color: #dde6ed;
+    }
+  }
+
+  .tab_header {
+    border-bottom: 2px solid linear-gradient(316deg, #310e68 0%, #4a0d55 20%, #5f0f40 80%) !important;
+    border-radius: 1rem 1rem 0 0;
+
+    div>div>button {
+      color: #dde6ed;
+    }
+
+    div>div>.Mui-selected {
+      color: red;
+    }
+  }
+
+  .timline-opposite {
+    color: red;
+  }
+
+  .leaders-modal {
+    background-color: #0c1a32;
+
+    .leaders-name {
+      box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.15),
+        inset -10px -10px 30px rgba(0, 0, 0, 0.246);
+    }
+  }
+
+  .employee-devider {
+    background-color: gray;
+  }
+
+  .skills-matrics {
+    background-color: inherit;
+    color: #dde6ed;
+  }
+
+  .paperclass2 {
+    background-color: #12213c;
+  }
+
+  .d-okr {
+    background-color: #12213c;
+  }
+
+  .company-statics-filter {
+    background-color: #12213c;
+  }
+
+  .modal-content {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  @media screen and (max-width: 480px) {
+    .mat-mdc-form-field {
+      width: 15rem;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+
+  @media screen and (min-width: 1281px) and (max-width: 1700px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 1700px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  .cdk-overlay-container {
+    z-index: 1057 !important;
+  }
+
+  .mdc-text-field--outlined .mdc-notched-outline__leading {
+    border-color: white !important;
+  }
+
+  .mdc-text-field--outlined .mdc-notched-outline__notch {
+    border-top-color: white !important;
+    border-bottom-color: white !important;
+  }
+
+  .mdc-text-field--outlined .mdc-notched-outline__trailing {
+    border-color: white !important;
+  }
+
+  .mat-mdc-select-arrow>svg {
+    color: white;
+  }
+
+  .mat-mdc-floating-label {
+    color: white !important;
+  }
+
+  .filter-color {
+    div {
+      padding: 6px 20px;
+      border: 2px solid red;
+      color: white;
+    }
+  }
+
+
+  .skill-modal {
+    color: white;
+  }
+
+
+  .MuiPickersDay-root {
+    color: white;
+  }
+
+  .MuiDayCalendar-weekDayLabel {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .mat-mdc-select-value-text {
+    color: white !important;
+  }
+
+  .mat-mdc-text-field-wrapper .mdc-text-field .mdc-text-field--outlined .mdc-text-field--disabled {
+    opacity: 0.5 !important;
+  }
+
+  .mat-mdc-tab-link .mdc-tab-indicator__content--underline {
+    border-color: red !important;
+  }
+
+  .input-field {
+    color: black;
+  }
+
+  .okr-card {
+    background-color: #0c1a31;
+  }
+
+  .okr-card-text {
+    border: 2px solid red;
+    color: white;
+  }
+
+  .okr-card-logo {
+    color: white;
+  }
+
+  .okr-modal {
+    background-color: #0c1a31;
+  }
+
+  .mdc-icon-button {
+    color: black;
+  }
+
+  .side-navbar{
+    background-color: #0c1a31;
+  }
+  .side-navbar-tabs{
+    color: white;
+  }
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
+  .name-tabs{
+   margin-left: 20px;
+  }}
+  .side-navbar-cross-icon{
+    background-color: white;
+  }
+  .profile-box{
+    background-color: #020e1f !important;
+    color: white;
+  }
+  .profile-box-arrow-icon{
+    color: white;
+  }
+
+  .employee-dashboard-card{
+    background-color: #020e1f;
+    color: white;
+  }
+  .employee-dashboard-logo{
+    color: white;
+  }
+
+  .employee-dashboard-logo-border{
+    border-color: white;
+  }
+
+  .employee-dashboard-divider{
+    background: white;
+  }
+  .upload-box{
+    background-color: #006699 ;
+  }
+}
+
+.light {
+  background-color: #f7f8fe !important;
+  color: #27374d;
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .p,
+  .title {
+    color: #27374d;
+  }
+
+  .h6 {
+    color: #27374d;
+  }
+
+  .red {
+    color: transparent;
+    background: linear-gradient(316deg, #310e68 0%, #4a0d55 40%, #5f0f40 80%);
+    -webkit-background-clip: text;
+  }
+
+  .tableHeader {
+    color: #27374d;
+  }
+  .paperclass2 {
+    background-color: #f7f8fe;
+  }
+  .text-color {
+    color: black !important;
+  }
+
+  .mdc-form-field>label {
+    color: rgb(3, 0, 0) !important;
+  }
+
+  .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+    border-color: rgb(16, 1, 1) !important;
+  }
+.mat-mdc-table{
+  background-color: #fff;
+  color: #27374d;
+
+  th {
+    border-bottom: 3px solid red;
+  }
+}
+  .table {
+    background-color: #fff;
+    color: #27374d;
+
+    th {
+      border-bottom: 3px solid red;
+    }
+  }
+
+  .tablefilter {
+    color: "black";
+  }
+
+  .tableselect {
+    color: "black";
+  }
+
+  .emp-edit {
+    background-color: white;
+  }
+
+  .emp_edit_tab {
+    background-color: #ecedee;
+    color: black;
+    border: black;
+  }
+
+  .emp_edit_card {
+    background-color: #ecedee;
+    color: black;
+  }
+
+  .doughnutChart {
+    height: max-content !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    border-radius: inherit !important;
+  }
+
+  .MuiInputBase-root {
+    color: black;
+
+    div {
+      color: black;
+    }
+  }
+
+  .dash {
+    background-color: white;
+    border-color: 1px solid red;
+  }
+
+  mat-label{
+    color: black;
+  }
+
+  .contricard {
+    background-color: #f7f8fe;
+    color: black;
+  }
+
+  .cardleader {
+    background-color: #f7f8fe;
+    color: black;
+  }
+
+  .leaderlist {
+    border-bottom: 1px solid black;
+  }
+
+  .leaderrank {
+    color: black;
+  }
+
+  .contriselect {
+    color: black;
+  }
+
+  .containerprofile {
+    background-color: white;
+  }
+
+  .containerprofiletab {
+    border-bottom: 2px solid red;
+    border-color: red;
+  }
+
+  .profiletablabel {
+    color: black;
+  }
+
+  .backarrow {
+    color: black;
+  }
+
+
+
+  .inputitems {
+    div>div>label {
+      color: black;
+    }
+
+    div>div>input[type="text"] {
+      color: black;
+    }
+  }
+
+  .modalabout {
+    div>label {
+      color: black;
+    }
+
+    div>div>textarea {
+      color: black;
+    }
+  }
+
+  .dash-btn {
+    color: grey;
+  }
+
+  .dash-icon {
+    color: grey;
+    min-width: 2.5rem;
+  }
+
+  .hero-head {
+    background-color: #cad5de;
+  }
+
+  .hero-head-text {
+    color: #27374d;
+  }
+
+  .feature_description {
+    background-color: #dde6ed;
+  }
+
+  .dash-card {
+    background-color: #f8fafb;
+    box-shadow: 5px 5px #d8dde3;
+  }
+
+  .toggle {
+    background-color: #6a8295;
+  }
+
+  .nav-user-dropdown {
+    background-color: #bfd1df;
+  }
+
+  .nav-user-img {
+    color: white;
+  }
+
+  #myInput {
+    color: #27374d;
+    border: 1px solid #abb5cb;
+  }
+
+  .fa-search {
+    color: #5b6470;
+  }
+
+  .card-details {
+    background-color: #dde6ed;
+  }
+
+  .company_profile_card {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15),
+      inset -10px -10px 30px rgba(255, 255, 255, 0.246);
+  }
+
+  .tab {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+  }
+
+  .tab_header {
+    border-bottom: 2px solid linear-gradient(316deg, #310e68 0%, #4a0d55 20%, #5f0f40 80%) !important;
+
+    div>div>button {
+      color: #27374d;
+    }
+
+    div>div>.Mui-selected {
+      -webkit-text-fill-color: #0000;
+      background: -webkit-linear-gradient(270deg, #d6001c -54.17%, #6d297b);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .leaders-modal {
+    background-color: #fff;
+  }
+
+  .leaders-name {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15),
+      inset -10px -10px 30px rgba(255, 255, 255, 0.246);
+  }
+
+  .company-statics-filter {
+    background-color: white;
+  }
+
+  .container-one {
+    background-color: white;
+    color: #12213c;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .container-two {
+    background-color: white;
+    color: #12213c;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .Image img {
+    border-color: #0c1a32;
+  }
+
+  .icon-with-input {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .background-color {
+    background-color: #dde6ed;
+  }
+
+  .add-photo {
+    color: white !important;
+    margin-top: -10rem !important;
+    margin-left: -10rem !important;
+  }
+
+  .modal-content {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .status-select {
+    margin-top: 3.5rem !important;
+  }
+
+  @media screen and (min-width: 1281px) and (max-width: 1700px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 1700px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  .mat-mdc-button .mat-mdc-button-touch-target {
+    background-color: #d60016;
+    color: #ebebeb !important;
+    height: 41px;
+  }
+
+  .cdk-overlay-container {
+    z-index: 1057 !important;
+  }
+
+
+  .MuiSelect-icon {
+    color: #999999 !important;
+  }
+
+  .Image img {
+    border-color: #0c1a32;
+  }
+
+  .icon-with-input {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .example-full-width {
+    width: 150% !important;
+  }
+
+  .background-color {
+    background-color: #dde6ed;
+  }
+
+  .add-photo {
+    color: white !important;
+    margin-top: -10rem !important;
+    margin-left: -10rem !important;
+  }
+
+  .modal-content {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .status-select {
+    margin-top: 3.5rem !important;
+  }
+
+  @media screen and (max-width: 480px) {
+    .mat-mdc-form-field {
+      width: 15rem;
+    }
+  }
+
+
+  @media screen and (min-width: 1700px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .mat-mdc-form-field {
+      width: 20rem;
+    }
+  }
+
+
+  .filter-color {
+    div {
+      padding: 6px 20px;
+      border: 2px solid palevioletred;
+      color: black;
+    }
+  }
+
+
+  .mdc-text-field--disabled {
+    border: 0.5px solid #28231d !important;
+    opacity: 0.8 !important;
+  }
+
+  .mdc-text-field--disabled .mdc-text-field__input {
+    color: #28231d !important;
+  }
+
+  .mdc-text-field--outlined.mdc-text-field--disabled .mdc-floating-label,
+  .mdc-text-field--outlined.mdc-text-field--disabled .mdc-floating-label--float-above {
+    color: #28231d !important;
+  }
+
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+    .mdc-notched-outline--upgraded
+    .mdc-floating-label--float-above {
+    background-color: white !important;
+  }
+  .mat-mdc-tab-link .mdc-tab-indicator__content--underline {
+    border-color: red !important;
+  }
+  .navbar {
+    padding-bottom: 0rem;
+  }
+}
+
+.MuiSelect-icon {
+  color: #999999 !important;
+}
+
+  .mdc-text-field--disabled {
+    border: 0.5px solid #28231d !important;
+    opacity: 0.8 !important;
+  }
+
+  .mat-mdc-tab-link .mdc-tab-indicator__content--underline {
+    border-color: red !important;
+  }
+
+  .navbar {
+    padding-bottom: 0rem;
+  }
+
+  .mdc-form-field>label {
+    font-weight: 600;
+    color: white;
+  }
+
+  .input-field {
+    padding-left: 10px;
+  }
+
+  .form {
+    margin-left: 4rem;
+  }
+
+  .rich-text {
+    width: 66rem;
+    margin-left: 1rem !important
+  }
+
+  .ql-editor {
+    height: 10rem !important;
+  }
+
+
+
+.mdc-form-field > label {
+  font-weight: 600;
+  color: white;
+}
+
+.mat-mdc-radio-button
+  .mdc-radio
+  .mdc-radio__native-control:enabled:not(:checked)
+  + .mdc-radio__background
+  .mdc-radio__outer-circle {
+  border-color: white !important;
+  .label{
+    background-color: white ;
+  }
+  .side-navbar-tabs{
+    color: black;
+  }
+  .profile-box-arrow-icon{
+    color: black ;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  .name-tabs{
+   margin-left: 20px;
+  }}
+
+#mui-19 {
+  border: none !important;
+}
+
+.MuiPickersDay-root.Mui-selected {
+  background-color: red !important;
+  color: white;
+}
+
+.MuiDateRangePickerDay-rangeIntervalDayHighlight {
+  background-color: rgba(255, 0, 0, 0.12) !important;
+}
+
+.back-to-list-button {
+  background-color: gray !important;
+  border-radius: 20px !important;
+  margin: 10px 10px 0px !important;
+
+  svg {
+    color: white;
+  }
+}
+
+.toast-container {
+  position: absolute;
+  inset: 0px;
+  width: 12rem;
+  max-width: 100vw;
+  margin: auto;
+}

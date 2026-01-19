@@ -1,0 +1,262 @@
+{
+    "January": [
+      {
+        "Project": 160,
+        "Bench": 100,
+        "competency": "Frontend"
+      },
+      {
+        "Project": 78,
+        "Bench": 80,
+        "competency": "Testing"
+      },
+      {
+        "Project": 106,
+        "Bench": 41,
+        "competency": "AI/ML"
+      },
+      {
+        "Project": 92,
+        "Bench": 73,
+        "competency": "Scala"
+      },
+      {
+        "Project": 92,
+        "Bench": 99,
+        "competency": "Java"
+      },
+      {
+        "Project": 200,
+        "Bench": 144,
+        "competency": "DevOps"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": ".Net"
+      },
+      {
+        "Project": 106,
+        "Bench": 50,
+        "competency": "Kotlin"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": "NOC"
+      },
+      {
+        "Project": 106,
+        "Bench": 150,
+        "competency": "Project Managmnt"
+      }
+    ],
+    "February": [
+      {
+        "Project": 200,
+        "Bench": 80,
+        "competency": "Frontend"
+      },
+      {
+        "Project": 100,
+        "Bench": 20,
+        "competency": "Testing"
+      },
+      {
+        "Project": 150,
+        "Bench": 60,
+        "competency": "AI/ML"
+      },
+      {
+        "Project": 180,
+        "Bench": 80,
+        "competency": "Scala"
+      },
+      {
+        "Project": 160,
+        "Bench": 90,
+        "competency": "Java"
+      },
+      {
+        "Project": 20,
+        "Bench": 144,
+        "competency": "DevOps"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": ".Net"
+      },
+      {
+        "Project": 106,
+        "Bench": 50,
+        "competency": "Kotlin"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": "NOC"
+      },
+      {
+        "Project": 106,
+        "Bench": 150,
+        "competency": "Project Managmnt"
+      }
+    ],
+    "March": [
+      {
+        "Project": 90,
+        "Bench": 110,
+        "competency": "Frontend"
+      },
+      {
+        "Project": 50,
+        "Bench": 140,
+        "competency": "Testing"
+      },
+      {
+        "Project": 150,
+        "Bench": 60,
+        "competency": "AI/ML"
+      },
+      {
+        "Project": 92,
+        "Bench": 73,
+        "competency": "Scala"
+      },
+      {
+        "Project": 92,
+        "Bench": 99,
+        "competency": "Java"
+      },
+      {
+        "Project": 200,
+        "Bench": 144,
+        "competency": "DevOps"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": ".Net"
+      },
+      {
+        "Project": 106,
+        "Bench": 50,
+        "competency": "Kotlin"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": "NOC"
+      },
+      {
+        "Project": 106,
+        "Bench": 150,
+        "competency": "Project Managmnt"
+      }
+    ],
+    "April": [
+      {
+        "Project": 170,
+        "Bench": 80,
+        "competency": "Frontend"
+      },
+      {
+        "Project": 90,
+        "Bench": 40,
+        "competency": "Testing"
+      },
+      {
+        "Project": 200,
+        "Bench": 80,
+        "competency": "AI/ML"
+      },
+      {
+        "Project": 110,
+        "Bench": 50,
+        "competency": "Scala"
+      },
+      {
+        "Project": 20,
+        "Bench": 100,
+        "competency": "Java"
+      },
+      {
+        "Project": 200,
+        "Bench": 144,
+        "competency": "DevOps"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": ".Net"
+      },
+      {
+        "Project": 106,
+        "Bench": 50,
+        "competency": "Kotlin"
+      },
+      {
+        "Project": 105,
+        "Bench": 70,
+        "competency": "NOC"
+      },
+      {
+        "Project": 106,
+        "Bench": 150,
+        "competency": "Project Managmnt"
+      }
+    ],
+    "May": [
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Frontend"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Testing"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "AI/ML"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Scala"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Java"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "DevOps"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": ".Net"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Kotlin"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "NOC"
+      },
+      {
+        "Project": 0,
+        "Bench": 0,
+        "competency": "Project Managmnt"
+      }
+    ]
+  }

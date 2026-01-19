@@ -1,0 +1,80 @@
+[
+    {
+    
+        "id":1,
+        "emp_name":"Aditya Gangwar",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > AI/ML",
+        "location":"Noida",
+        "email":"testtesttest@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"11"
+    },
+    {
+        "id":10,
+        "emp_name":"Deepak Kumar Srivastava",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > Frontend",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"https://th.bing.com/th/id/OIP.UGlKxiZQylR3CnJIXSbFIAHaLL?rs=1&pid=ImgDetMain",
+        "dep_code":"9"
+    },
+    {
+        "id":11,
+        "emp_name":"Deepak Kumar Srivastava",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > Frontend",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"9"
+    },
+    {
+        "id":9,
+        "emp_name":"Aditya Gangwar",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > Scala",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"13"
+    },
+    {
+        "id":5,
+        "emp_name":"Richard Hendricks",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > Frontend",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"9"
+    },
+    {
+        "id":6,
+        "emp_name":"Richard Hendricks",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > Scala",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"13"
+    },
+    {
+        "id":7,
+        "emp_name":"Richard Hendricks",
+        "emp_design":"Intern",
+        "emp_dep": "Engineering Operations > FrontEnd",
+        "location":"Noida",
+        "email":"test@gmail.com",
+        "phoneNo":"1234567890",
+        "emp_image":"",
+        "dep_code":"9"
+    }
+]

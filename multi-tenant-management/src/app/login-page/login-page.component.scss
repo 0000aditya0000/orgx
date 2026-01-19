@@ -1,0 +1,84 @@
+section {
+  overflow: hidden;
+  background-size: cover;
+}
+
+.container-fluid{
+  height: 100vh;
+}
+
+.tagline{
+  font-style: italic;
+}
+
+.gradient-button {
+  background: linear-gradient(316deg,#310e68 0%,#4a0d55 40%,#5f0f40 80%) no-repeat 0 0/cover;
+  color: #fff !important;
+  padding: 8px 23px;
+  letter-spacing: .7px;
+  border: none;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.gradient-button:hover{
+  transform: scale(1.03);
+  background: linear-gradient(300deg,#5f0f40 0%,#4a0d55 50%, #310e68 90%) no-repeat 0 0/cover;
+}
+
+.gradient-text {
+  -webkit-text-fill-color: #0000;
+  background: -webkit-linear-gradient(270deg, #d6001c -54.17%, #6d297b);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+:host ::ng-deep .mat-mdc-radio-button.mat-accent {
+  --mdc-radio-selected-pressed-icon-color: #bd0877;
+  --mdc-radio-selected-icon-color: #bd0877 ;
+  --mdc-radio-selected-focus-icon-color: #bd0877;
+  --mdc-radio-selected-hover-icon-color: #bd0877;
+  --mat-radio-checked-ripple-color: #bd0877;
+}
+
+a {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.form-container {
+  margin-top: 200px;
+}
+
+input {
+  background-color: #ffffff;
+}
+
+.mat-mdc-form-field-bottom-align::before {
+  content: "";
+  display: none;
+}
+
+::ng-deep .mat-mdc-form-field-error-wrapper{
+  padding: 3px 0px !important;
+}
+
+.pointer-cursor{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+    .sign-in-form{
+      padding-right: 48px !important;
+      padding-left: 20px !important;
+    }
+}
+
+@media screen and (max-width: 1199px){
+  .container-fluid{
+    margin: 5rem 0;
+    height: auto;
+  }
+}

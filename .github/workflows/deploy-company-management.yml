@@ -1,0 +1,44 @@
+name: Deploy Company Management to Azure
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'company-management/**'
+      - '.github/workflows/deploy-company-management.yml'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18.x'
+  APP_NAME: 'company-management'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: company-management/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./company-management
+        run: npm ci
+
+      - name: Build application
+        working-directory: ./company-management
+        run: npm run build
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME_COMPANY_MANAGEMENT }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_COMPANY_MANAGEMENT }}
+          package: ./company-management/dist

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/nash-components.esm.js"></script>
+    <script nomodule src="/build/nash-components.js"></script>
+  </head>
+  <body>
+    <ntg-toggle checked=true></ntg-toggle>
+    <ntg-toggle checked=false></ntg-toggle>
+    <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+    <nash-button>Plain</nash-button>
+  <nash-button transform="uppercase" color="primary">Primary</nash-button>
+  <nash-button color="#F5F6F8">Secondary</nash-button>
+  <nash-button color="danger">Danger</nash-button>
+
+  <h3>Raised</h3>
+
+  <nash-button transform="uppercase" type="raised">Plain</nash-button>
+  <nash-button transform="lowercase" type="raised" color="primary">Primary</nash-button>
+  <nash-button transform="capitalize" type="raised" color="#F5F6F8">Secondary</nash-button>
+  <nash-button transform="none" type="raised" color="danger">Danger</nash-button>
+  <br>
+  <br>
+  <br>
+
+  <h3>Outline</h3>
+
+  <nash-button type="outline">Plain</nash-button>
+  <nash-button transform="uppercase" type="outline" color="primary">Primary</nash-button>
+  <nash-button type="outline" color="#F5F6F8">Secondary</nash-button>
+  <nash-button type="outline" color="danger">Danger</nash-button>
+  <br>
+  <br>
+  <br>
+
+  <h3>Flat</h3>
+
+  <nash-button transform="uppercase" type="flat">Plain</nash-button>
+  <nash-button type="flat" color="primary">Primary</nash-button>
+  <nash-button type="flat" color="#F5F6F8">Secondary</nash-button>
+  <nash-button type="flat" color="danger">Danger</nash-button>
+  <br>
+  <br>
+  </body>
+</html>

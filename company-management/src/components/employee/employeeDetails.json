@@ -1,0 +1,35 @@
+{
+    "personalDetails" :[
+        {
+            "FIRST_NAME" : "test",
+            "MIDDLE_NAME" : "-",
+            "LAST_NAME" : "Srivastava",
+            "GENDER" : "Male",
+            "NATIONALITY" : "Indian",
+            "BLOOD_GROUP" : "-B",
+            "PHYSICALLY_HANDICAP" : "No",
+            "DOB" : "no",
+            "AADHARCARD_NUMBER" : "123456789123",
+            "PANCARD_NUMBER" : "ABCD1234",
+            "UAN_NUMBER" : "-",
+            "MARTIAL_STATUS" : "Single"
+
+        }
+
+],
+"contactDetails" : [
+    {
+        "WORK_EMAIL" : "test@gmail.com",
+        "PERSONAL_EMAIL" : "1234567890",
+        "PHONE_NUMBER" : "1234567890",
+        "GITHUB_ID" : "test@git.com",
+        "WORK_PHONE" : "1234567890",
+        "WORDPRESS_ID" : "test@wordpress.com",
+        "WHATSAPP_NUMBER" : "1234567890",
+        "BITBUCKET_ID" : "test@bitbucket.com"
+
+
+    }
+
+]
+}

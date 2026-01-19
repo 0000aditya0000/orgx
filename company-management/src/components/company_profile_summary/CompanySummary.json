@@ -1,0 +1,39 @@
+[{
+    "name": "NashTech Global",
+    "about": "Nashtech is a leading technology solutions provider, dedicated to delivering innovative software development, digital transformation, and IT consulting services to clients worldwide. With a rich history spanning over two decades, Nashtech has established itself as a trusted partner for businesses seeking to harness the power of technology to drive growth and success.",
+    "mission&values": ["Helping Businesses Succeed With Technology","GLUE - Giving Little Unexpected Extra","Go 1%","Think Bold, Think Fast!","Sharing is Caring"],
+    "leaders": [{
+        "name": "John O'Brien",
+        "designation": "CEO"
+    },
+    {
+        "name": "Phill Went",
+        "designation": "Global Delivery Director"
+    },
+    {
+        "name": "Vikas Hazrati",
+        "designation": "CTO"
+    },
+    {
+        "name": "Paul Hunt",
+        "designation": "Global Presales Director"
+    },
+    {
+        "name": "James Hilton",
+        "designation": "Global Finance Director"
+    },
+    {
+        "name": "Shelly Hawkins",
+        "designation": "Global HR Director"
+    },
+    {
+        "name": "George Lynch",
+        "designation": "Head of Technology Advisory"
+    },
+    {
+        "name": "Osama Kamiya",
+        "designation": "Country Manager, Japan"
+    }],
+    "culture": "At Nashtech, we foster a culture of inclusivity, collaboration, and continuous learning. Our diverse team of talented professionals comes together to tackle complex challenges, inspire innovation, and deliver exceptional results. We believe in creating a supportive work environment where every individual is valued, respected, and empowered to reach their full potential.",
+    "structure": "Nashtech operates across multiple business units, each specializing in distinct areas of expertise such as software development, cloud computing, cybersecurity, and digital marketing. Our organizational structure is designed to promote agility, flexibility, and seamless collaboration, enabling us to respond quickly to client needs and market trends."
+}]

@@ -1,0 +1,200 @@
+section {
+  background-color: #f7f8fe;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.registration-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.tenantHeading {
+  -webkit-text-fill-color: #0000;
+  background: -webkit-linear-gradient(270deg, #310e68 0%, #4a0d55 40%, #5f0f40 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 27px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+::ng-deep {
+  .mat-stepper-horizontal {
+    background-color: transparent;
+  }
+
+  .mat-step-header .mat-step-icon {
+    background-color: #310e68;
+  }
+
+  .mat-step-header .mat-step-icon-selected {
+    background-color: #5f0f40;
+  }
+
+  .mat-step-header .mat-step-icon-state-done {
+    background-color: #4a0d55;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .mat-mdc-form-field-error-wrapper {
+    padding: 3px 0px !important;
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(316deg,#310e68 0%,#4a0d55 40%,#5f0f40 80%) no-repeat 0 0/cover;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  transition: transform 0.3s, background-color 0.3s;
+
+  &:hover:not(:disabled) {
+    transform: scale(1.02);
+    background: linear-gradient(300deg,#5f0f40 0%,#4a0d55 50%, #310e68 90%) no-repeat 0 0/cover;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.plan-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(49, 14, 104, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  &.selected {
+    border-color: #310e68;
+    background: rgba(49, 14, 104, 0.02);
+
+    .description {
+      color: #310e68;
+    }
+
+    .gradient-button {
+      background: linear-gradient(300deg, #5f0f40 0%, #4a0d55 50%, #310e68 90%) no-repeat 0 0/cover;
+      color: #fff;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(49, 14, 104, 0.1);
+}
+
+.plan-name {
+  color: #310e68;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  font-size: 1.25rem;
+  color: #4a0d55;
+  font-weight: 600;
+  margin: 0;
+}
+
+.plan-details {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  margin-bottom: 1.5rem;
+  color: #4a0d55;
+  min-height: 68px;
+  transition: color 0.3s ease;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #4a0d55;
+  position: relative;
+
+  .detail-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+
+    &:hover::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #310e68;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 1;
+    }
+  }
+
+  mat-icon {
+    color: #310e68;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.plan-footer {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .registration-card {
+    padding: 1.5rem;
+  }
+
+  .plan-card {
+    margin-bottom: 1rem;
+  }
+}

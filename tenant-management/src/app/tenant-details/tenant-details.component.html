@@ -1,0 +1,67 @@
+<div class="modal show d-block " tabindex="-1" role="dialog">
+  <div *ngIf="showModal" class="modal-dialog modal-dialog-slideout bg-white rounded-2" role="document">
+    <div class="modal-content d-flex flex-column h-100">
+      <div class="modal-header">
+        <h5 class="modal-title mx-2">View Tenant</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="cancel()"></button>
+      </div>
+      <div class="modal-body d-flex flex-column h-100 overflow-auto ">
+        <form class="flex-grow-1 d-flex flex-column mt-4" [formGroup]="createTenantForm">
+          <div class="container-fluid">
+            <div class="row gx-4">
+              <div class="col-md-12 mb-3">
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Name</mat-label>
+                  <input matInput class="input" placeholder="Enter Name" name="name" autocomplete="off"
+                    formControlName="tenant_name" />
+                </mat-form-field>
+              </div>
+              <div class="col-md-12 mb-3">
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Email</mat-label>
+                  <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="tenant_email" />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 mb-3" >
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Contact Number</mat-label>
+                  <input matInput placeholder="Contact Number" class="input" formControlName="phone" />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Location</mat-label>
+                  <input matInput placeholder="Location" class="input" formControlName="location" />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Subscription Details</mat-label>
+                  <mat-select formControlName="subscription_details">
+                    <mat-option *ngFor="let plan of subscriptionPlans" [value]="plan.planName">{{ plan.planName
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <mat-form-field class="w-100" appearance="outline" floatLabel="always" >
+                  <mat-label class="label">Status</mat-label>
+                  <mat-select formControlName="status">
+                    <mat-option value="active">Active</mat-option>
+                    <mat-option value="inactive">Inactive</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto d-flex justify-content-end mb-4 me-3">
+            <button type="button" class="btn btn-secondary me-2" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="px-5">
+    <div class="d-flex d-flex justify-content-between align-items-center px-2 mb-3 mt-4">
+        <h3 class="fw-bold red">Subscription Plans</h3>
+        <button type="submit" mat-raised-button class="me-4 gradient-button" (click)="openModal(createSubscriptionComponet)">Add Plan</button>
+    </div>
+    <div class="row col-12">
+      <ng-container *ngIf="subscriptionPlans.length === 0;else plansCard">
+        <div class="d-flex justify-content-center">
+          <span class="message my-4">No plans to display! Please create a plan.</span>
+        </div>
+      </ng-container>
+      <ng-template #plansCard>
+        <div class="col-xl-4 col-md-6 col-12" *ngFor="let plan of subscriptionPlans">
+          <mat-card class="subscription-card my-3">
+            <mat-card-header class="d-flex justify-content-between w-100">
+              <mat-card-title class="d-flex justify-content-between w-100">
+                <div class="fw-bold">{{ plan.planName }} plan</div>
+                <div><mat-chip [ngClass]="{'active': plan.status === 'active', 'inactive': plan.status !== 'active'}" selected>
+                  {{ plan.status | uppercase }}
+                </mat-chip> </div>
+              </mat-card-title>
+
+              <mat-card-subtitle class="price my-3">${{ plan.price }}</mat-card-subtitle>
+              <mat-icon class="mx-2 cursor-pointer" (click)="openEditModal(plan)">edit</mat-icon>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="description">
+                <p [innerHTML]="plan.planDescription"></p>
+              </div>
+              <div>
+                <hr/>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <div class="d-flex align-items-center">
+                    <mat-icon>groups</mat-icon>
+                    <span>No. of Employees</span>
+                  </div>
+                  <span>{{ plan.numberOfEmployees }}</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <div class="d-flex align-items-center">
+                    <mat-icon>date_range</mat-icon>
+                    <span>Duration</span>
+                  </div>
+                  <span>{{ plan.planDuration }} months</span>
+                </div>
+              </div>
+              <div class="chips-container">
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </ng-template>
+    </div>
+    <ng-template #createSubscriptionComponet let-modal="modal">
+      <app-create-subscription [modalService]="modalService" (submitSuccess)="submit($event)"></app-create-subscription>
+    </ng-template> 
+
+    <ng-template #editSubscriptionComponet let-modal="modal">
+      <app-edit-subscription [modalService]="modalService" ></app-edit-subscription>
+    </ng-template> 
+  </div>

@@ -1,0 +1,109 @@
+{
+  "createTenant": [
+    {
+      "tenant_name": "leaderboard",
+      "tenant_email": "lb@knoldus.comm",
+      "tenant_code": "LB_019",
+      "password": "abcefdjnmnn",
+      "id": 1
+    },
+    {
+      "tenant_name": "Nashtech",
+      "tenant_email": "nash@nashtechglobal.com",
+      "tenant_code": "NS_01",
+      "password": "1234jjj",
+      "id": 2
+    },
+    {
+      "tenant_name": "go1UP",
+      "tenant_email": "go1@gmail.com",
+      "tenant_code": "abc_012",
+      "password": "111111",
+      "id": 3
+    },
+    {
+      "tenant_name": "acme",
+      "tenant_email": "acme@gmail.com",
+      "tenant_code": "csd",
+      "password": "sdvsd",
+      "id": 4
+    }
+  ],
+  "createStudio": [
+    {
+      "studio_code": "DEV",
+      "studio_name": "DevOps Studio",
+      "studio_email": "devOps@gmail.com",
+      "studio_password": "mjhjh",
+      "id": 0
+    },
+    {
+      "studio_name": "FE",
+      "studio_email": "fe@gmail.com",
+      "studio_code": "FE",
+      "studio_password": "1234",
+      "id": 1
+    },
+    {
+      "studio_code": "JAVA",
+      "studio_name": "Java studio",
+      "studio_email": "java@gmail.com",
+      "studio_password": "66777",
+      "id": 2
+    },
+    {
+      "studio_code": "SCALA",
+      "studio_name": "Scala",
+      "studio_email": "scala@gmail.com",
+      "studio_password": "1234",
+      "id": 3
+    },
+    {
+      "studio_code": "ab",
+      "studio_name": "Scala",
+      "studio_email": "sc@gmail.com",
+      "studio_password": "7878",
+      "id": 4
+    }
+  ],
+  "createEmployee": [
+    {
+      "employee_code": "01",
+      "employee_name": "Neha",
+      "employee_email": "neha@gmail.com",
+      "employee_password": "77676",
+      "id": 0
+    },
+    {
+      "employee_code": "02",
+      "employee_name": "Alka",
+      "employee_email": "alka@gmail.com",
+      "employee_password": "1234",
+      "id": 1
+    },
+    {
+      "employee_code": "03",
+      "employee_name": "Kiran",
+      "employee_email": "kiran@gmail.com",
+      "employee_password": "abc",
+      "id": 2
+    },
+    {
+      "employee_name": "Devansh",
+      "employee_email": "devansh@gmail.com",
+      "employee_code": "05",
+      "employee_password": "dfgsdfgdsfg",
+      "id": 3
+    },
+    {
+      "employee_name": "Anuj",
+      "employee_email": "anuj@gmail.com",
+      "employee_code": "07",
+      "employee_password": "dfgsdfgdsfg",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

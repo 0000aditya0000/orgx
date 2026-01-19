@@ -1,0 +1,47 @@
+{
+"data" : [
+    {
+    "practice_id" : 1,
+    "practice_code" : "#3450",   
+    "practice_head" : "bhv",
+    "practice_location" : "indian",
+    "practice_totalEmployees" : 30,
+    "practice_title" : "engeeringdepartment",
+    "practice_description" : "asf,ccccccccccccc",
+    "practice_competency" : ""},
+
+    {
+    "practice_id" : 2,
+    "practice_code" : "#3450",   
+    "practice_head" : "bhv",
+    "practice_location" : "indian",
+    "practice_totalEmployees" : 30,
+    "practice_title" : "engeeringdepartment",
+    "practice_description" : "asf,ccccccccccccc",
+    "practice_competency" : ""
+    }, 
+
+    {
+    "practice_id" : 3,
+    "practice_code" : "#3450",   
+    "practice_head" : "bhv",
+    "practice_location" : "indian",
+    "practice_totalEmployees" : 30,
+    "practice_title" : "engeeringdepartment",
+    "practice_description" : "asf,ccccccccccccc",
+    "practice_competency" : ""
+    }, 
+
+    {
+    "practice_id" : 4,
+    "practice_code" : "#3450",   
+    "practice_head" : "bhv",
+    "practice_location" : "indian",
+    "practice_totalEmployees" : 30,
+    "practice_title" : "engeeringdepartment",
+    "practice_description" : "asf,ccccccccccccc",
+    "practice_competency" : ""
+    }
+]
+    
+}

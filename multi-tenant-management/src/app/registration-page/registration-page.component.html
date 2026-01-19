@@ -1,0 +1,144 @@
+<section class="d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="registration-card">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid" style="font-size: large; justify-content: flex-start">
+              <a class="navbar-brand me-2">
+                <img style="width: 50px; height: 50px;" src="https://www.nashtechglobal.com/wp-content/uploads/2023/03/nashTech-logo-red.svg" alt="logo" />
+              </a>
+              <h1 class="postcard__title red tenantHeading">
+                <span>Org -X </span>
+              </h1>
+            </div>
+          </nav>
+          <mat-horizontal-stepper [linear]="true" #stepper>
+            <mat-step [stepControl]="registrationForm" label="Registration Form">
+              <form [formGroup]="registrationForm">
+                <div class="form-outline mb-4 mt-3">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Company Name</mat-label>
+                    <input matInput type="text" id="companyName" formControlName="companyName" placeholder="Enter your company name" class="w-100" autocomplete="off">
+                    <mat-error *ngIf="registrationForm.get('companyName')?.invalid && registrationForm.get('companyName')?.touched">
+                      Company Name is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-outline mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Email Address</mat-label>
+                    <input matInput type="email" id="email" formControlName="email" placeholder="Enter your email" autocomplete="off">
+                    <mat-error *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+                      <span *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required</span>
+                      <span *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format</span>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-outline mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Contact Number</mat-label>
+                    <input matInput type="tel" id="phone" formControlName="phone" placeholder="Enter your contact number" autocomplete="off">
+                    <mat-error *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched">
+                      <span *ngIf="registrationForm.get('phone')?.errors?.['required']">Contact number is required</span>
+                      <span *ngIf="registrationForm.get('phone')?.errors?.['minlength']">Contact number must be at least 10 digits</span>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-outline mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status">
+                      <mat-option value="Active">Active</mat-option>
+                      <mat-option value="Inactive">Inactive</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.get('status')?.invalid && registrationForm.get('status')?.touched">
+                      Status is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-outline mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Location</mat-label>
+                    <input matInput type="text" id="location" formControlName="location" placeholder="Enter your Location" autocomplete="off">
+                    <mat-error *ngIf="registrationForm.get('location')?.invalid && registrationForm.get('location')?.touched">
+                      Location is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="form-outline w-100 mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" [type]="showPass ? 'text' : 'password'" id="password" />
+                    <mat-icon matSuffix (click)="showPass = !showPass">{{ showPass ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    <mat-error *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
+                      {{ getPasswordErrorMessage() }}
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                
+                <!-- <div class="form-outline w-100 mb-4">
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>About Company</mat-label>
+                    <textarea matInput id="aboutCompany" formControlName="aboutCompany" placeholder="Enter a short description about your company" rows="3"></textarea>
+                    <mat-error *ngIf="registrationForm.get('aboutCompany')?.invalid && registrationForm.get('aboutCompany')?.touched">
+                      <span *ngIf="registrationForm.get('aboutCompany')?.errors?.['required']">Company Description is required</span>
+                      <span *ngIf="registrationForm.get('aboutCompany')?.errors?.['maxLength']">Description cannot be longer than 500 characters</span>
+                    </mat-error>
+                  </mat-form-field>
+                </div> -->
+                <div class="d-flex justify-content-end">
+                  <button  class="btn btn-secondary  me-2" (click)="backToLogin()">Back to Login</button>
+                  <button  class="gradient-button" [disabled]="!registrationForm.valid" (click)="goToNextStep()">Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step label="Subscription Plans">
+              <div class="row mt-3">
+                <div class="col-lg-4 col-md-6 mb-4 px-3" *ngFor="let plan of subscriptionPlans">
+                  <div class="plan-card" [ngClass]="{'selected': selectedSubscription?.planName === plan.planName}" (click)="onPlanSelect(plan)">
+                    <div class="plan-header">
+                      <h3 class="plan-name">{{ plan.planName }}</h3>
+                      <p class="price">{{ formatPrice(plan.price) }}</p>
+                    </div>
+
+                    <div class="plan-details">
+                      <div class="description">
+                        <p [innerHTML]="sanitizeDescription(plan.planDescription)"></p>
+                      </div>
+
+                      <div class="detail-row">
+                        <div class="detail-label" data-label="No. of Employees">
+                          <mat-icon>groups</mat-icon>
+                        </div>
+                        <span>{{ plan.numberOfEmployees }}</span>
+                      </div>
+
+                      <div class="detail-row">
+                        <div class="detail-label" data-label="Duration">
+                          <mat-icon>date_range</mat-icon>
+                        </div>
+                        <span>{{ plan.planDuration }} months</span>
+                      </div>
+                    </div>
+
+                    <div class="plan-footer">
+                      <button  class="gradient-button w-100">
+                        {{ selectedSubscription?.planName === plan.planName ? 'Plan Selected' : 'Select Plan' }}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between mt-4">
+                <button class="gradient-button" (click)="goToPreviousStep()">Back</button>
+                <button  class="gradient-button" [disabled]="!selectedSubscription" (click)="onSubmit()">Register</button>
+              </div>
+            </mat-step>
+          </mat-horizontal-stepper>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

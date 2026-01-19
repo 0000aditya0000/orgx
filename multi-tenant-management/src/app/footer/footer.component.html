@@ -1,0 +1,58 @@
+<footer>
+  <div class="d-inline-block w-100 footer">
+    <div class="container-lg mt-5">
+      <img width="100%" src="https://www.nashtechglobal.com/wp-content/uploads/2023/03/NashTech-logo-White.svg"
+        alt="partner" style="width: 72px;
+        height: 72px;" />
+    </div>
+    <div class="container-lg container-footer">
+      <div class="pt-5" style="width: 100%" *ngFor="let footerLink of footerLinks">
+        <div class="connect-content-container pr-0">
+          <div class="connect-content-wrapper h-100 ml-0 ml-md-5 ml-lg-0">
+          <h2>{{footerLink.heading}}</h2>
+          <ul class="p-0">
+            <li style="padding-top: 10px" *ngFor="let link of footerLink.links">
+              <a *ngIf="link.linkUrl.substr(0, 1) === '/'; else externalLink" [routerLink]="link.linkUrl"
+                [innerHTML]="link.linkText"></a>
+              <ng-template #externalLink>
+                <a [href]="link.linkUrl" target="_blank" [innerHTML]="link.linkText"></a>
+              </ng-template>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="partners-container" style="padding-top: 4rem">
+      <div class="partners-wrapper">
+        <h2>
+          <span>
+            Our Achievements
+          </span>
+        </h2>
+        <div class="container-lg">
+          <hr class="container"/>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-div">
+      <owl-carousel-o [options]="customCarouselOptions">
+        <ng-container *ngFor="let slide of partnersFooter">
+          <ng-template carouselSlide id="slide">
+            <img [src]="slide.image" alt="footer-images" height="120px">
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+    <div class="copyright-wrapper">
+      <div class="container-lg">
+        <div class="py-4">
+          <div class="copyright-content text-md-left">
+            &copy; 2023 NashTech <br />
+            <p>Part of Nash Squared</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

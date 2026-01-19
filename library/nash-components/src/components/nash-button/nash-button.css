@@ -1,0 +1,184 @@
+:root {
+  --app-primary-color: linear-gradient(316deg, #310e68 0%, #4a0d55 20%, #5f0f40 80%) no-repeat 0 0 / cover;
+  --app-secondary-color: #F5F6F8;
+  --app-danger-color: linear-gradient(316deg, #310e68 0%, #4a0d55 20%, #5f0f40 80%) no-repeat 0 0 / cover;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 8px 8px;
+  width: 100%;
+  outline: 0;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  height: 2.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.button.uppercase {
+  text-transform: uppercase;
+}
+
+.button.lowercase,
+.button[lowercase] {
+  text-transform: lowercase;
+}
+
+.button.capitalize {
+  text-transform: capitalize;
+}
+
+.button.disabled,
+.button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.basic {
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.basic.lowercase {
+  text-transform: lowercase;
+}
+
+.basic.uppercase {
+  text-transform: uppercase;
+}
+
+.basic.capitalize {
+  text-transform: capitalize;
+}
+
+.basic:hover {
+  background-color: #dfdfdf;
+}
+
+.basic.plain {
+  color: #1a1a1a;
+}
+
+.basic.primary {
+  color: var(--app-primary-color);
+}
+
+.basic.secondary {
+  color: var(--app-secondary-color, #F5F6F8);
+}
+
+.basic.danger {
+  color: var(--app-danger-color, rgb(255, 86, 80));
+}
+
+.raised {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.raised.primary,
+.flat.primary,
+.raised.lowercase {
+  background: linear-gradient(316deg, #310e68 0%, #4a0d55 20%, #5f0f40 80%) no-repeat 0 0 / cover !important;
+  color: var(--app-primary-text-color, #fff);
+  text-transform: lowercase;
+}
+
+.raised.lowercase {
+  text-transform: lowercase;
+}
+
+.raised.uppercase {
+  text-transform: uppercase;
+}
+
+.raised.capitalize {
+  text-transform: capitalize;
+}
+
+.raised.secondary,
+.flat.secondary {
+  background-color: var(--app-secondary-color, black);
+  color: var(--app-secondary-text-color, #fff);
+}
+
+.raised.danger,
+.flat.danger {
+  background-color: var(--app-danger-color);
+  color: var(--app-danger-text-color, #fff);
+}
+
+.raised .ripple,
+.flat .ripple {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.flat.lowercase {
+  text-transform: lowercase;
+}
+
+.flat.uppercase {
+  text-transform: uppercase;
+}
+
+.flat.capitalize {
+  text-transform: capitalize;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.outline.lowercase {
+  text-transform: lowercase;
+}
+
+.outline.uppercase {
+  text-transform: uppercase;
+}
+
+.outline.capitalize {
+  text-transform: capitalize;
+}
+
+.outline:hover {
+  background-color: #e0e0e0;
+}
+
+.outline.primary {
+  border-color: var(--app-primary-color);
+  color: var(--app-primary-color);
+}
+
+.outline.secondary {
+  border-color: var(--app-secondary-color, black);
+  color: var(--app-secondary-color, black);
+}
+
+.outline.danger {
+  border-color: var(--app-danger-color, rgb(255, 86, 80));
+  color: var(--app-danger-color, rgb(255, 86, 80));
+}
+
+.ripple {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+  animation: rippleDrop 0.4s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

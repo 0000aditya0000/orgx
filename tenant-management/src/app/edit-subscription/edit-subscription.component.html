@@ -1,0 +1,85 @@
+<div class="modal show d-block " tabindex="-1" role="dialog">
+    <div *ngIf="showModal" class="modal-dialog modal-dialog-slideout bg-white rounded-2" role="document">
+      <div class="modal-content d-flex flex-column h-100">
+        <div class="modal-header">
+          <h5 class="modal-title mx-2">Edit Subscription Plan</h5>
+          <button type="button" class="btn-close" aria-label="Close" (click)="cancelModal()"></button>
+        </div>
+        <div class="modal-body d-flex flex-column h-100 overflow-auto ">
+          <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="flex-grow-1 d-flex flex-column mt-4">
+            <div class="w-100 d-flex flex-column flex-wrap align-items-center justify-content-center">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12 mb-3">
+                    <mat-form-field appearance="outline" floatLabel="always" class="w-100 ">
+                      <mat-label>Subscription Plan Name</mat-label>
+                      <input matInput placeholder="Enter Subscription Plan Name" name="name" formControlName="planName"
+                        autocomplete="off" />
+                      <mat-error
+                        *ngIf="subscriptionForm.get('planName')?.touched && subscriptionForm.get('planName')?.hasError('required')">
+                        Subscription Plan Name is required.
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <mat-form-field appearance="outline" floatLabel="always" class="w-100">
+                      <mat-label>No. of Employees</mat-label>
+                      <input matNativeControl type="number" min="1" placeholder="Enter No.of Employees"
+                        formControlName="numberOfEmployees" />
+                      <mat-error
+                        *ngIf="subscriptionForm.get('numberOfEmployees')?.touched && subscriptionForm.get('numberOfEmployees')?.hasError('required')">
+                        No. of Employees is required.
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+  
+                  <div class="col-md-6 mb-3">
+                    <mat-form-field appearance="outline" floatLabel="always" class="w-100">
+                      <mat-label>Plan Duration</mat-label>
+                      <input matNativeControl type="number" placeholder="Enter Plan Duration" min="1"
+                        formControlName="planDuration" />
+                      <mat-error
+                        *ngIf="subscriptionForm.get('planDuration')?.touched && subscriptionForm.get('planDuration')?.hasError('required')">
+                        Plan Name is required.
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <mat-form-field appearance="outline" floatLabel="always" class="w-100">
+                      <mat-label>Price</mat-label>
+                      <input matInput placeholder="Enter Price" name="price" formControlName="price" autocomplete="off" />
+                      <mat-error
+                        *ngIf="subscriptionForm.get('price')?.touched && subscriptionForm.get('price')?.hasError('required')">
+                        Price is required.
+                      </mat-error>
+                      <mat-error
+                        *ngIf="subscriptionForm.get('price')?.touched && subscriptionForm.get('price')?.hasError('pattern')">
+                        Price must be a number.
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+  
+                  <div class="col-md-12 mb-3">
+                    <label class="fs-7">Subscription Plan Description*</label>
+                    <p class="form-field w-100">
+                      <quill-editor [modules]="modules" formControlName="planDescription" placeholder="Enter description"
+                        class="w-100 custom-quill-editor"></quill-editor>
+                      <span class="text-danger mat-mdc-form-field-subscript-wrapper"
+                        *ngIf="subscriptionForm.get('planDescription')?.touched && subscriptionForm.get('planDescription')?.errors ">
+                        Please provide subscription plan description.</span>
+  
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="mt-auto d-flex justify-content-end mb-4 me-3">
+              <button type="button" class="btn btn-secondary me-2" (click)="cancelModal()">Cancel</button>
+              <button type="submit" class="btn gradient-button">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

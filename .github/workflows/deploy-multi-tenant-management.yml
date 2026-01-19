@@ -1,0 +1,44 @@
+name: Deploy Multi-Tenant Management to Azure
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'multi-tenant-management/**'
+      - '.github/workflows/deploy-multi-tenant-management.yml'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18.x'
+  APP_NAME: 'multi-tenant-management'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: multi-tenant-management/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./multi-tenant-management
+        run: npm ci
+
+      - name: Build application
+        working-directory: ./multi-tenant-management
+        run: npm run build -- --configuration production
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME_MULTI_TENANT }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_MULTI_TENANT }}
+          package: ./multi-tenant-management/dist/multi-tenant-management
